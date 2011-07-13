@@ -32,12 +32,27 @@
         display: block;
         font-family: Arial,Helvetica,sans-serif;
         list-style-image: none;
-        
+        margin: 0;
+		padding: 0;
     }
+	.headingTitle
+	{
+		cursor: move;
+	}
+	#newsRegions
+	{
+		width: 1054px;
+        list-style-image: none;
+        margin: 0;
+		padding: 0;
+	}
     #newsRegions > ul
     {
         float: left;
 		clear: right;
+		height: 300px;
+		max-height: 300px;
+		overflow: hidden;
     }
     #newsRegions > ul > li
     {
@@ -63,7 +78,7 @@
 	}
 	.divBreak
 	{
-		clear: left;
+		/*clear: left;*/
 		padding-bottom: 18px;
 	}
 	#newsRegions a

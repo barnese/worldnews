@@ -6,8 +6,9 @@
 	<link rel="Stylesheet" href="styles.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
     <script src="jquery.jgfeed-min.js" type="text/javascript"></script>
+	<script src="jquery-ui-custom.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-		$(function() {
+		$(function() {				
 			// In no particular order
 			var feedSources = [
 				{ 	'region': 'USA',
@@ -78,7 +79,7 @@
 				for (var i = 0, len = feedSources.length; i < len; i++)
 				{
 					var template = '<li>';
-					template += '<h2>{region}</h2>';
+					template += '<h2 class="headingTitle">{region}</h2>';
 					template += '<ul id="{key}" class="links">';
 					template += '<li><em>Loading...</em></li>';
 					template += '</ul>';
@@ -137,6 +138,10 @@
 					
 				   $.jGFeed(feedSources[i].url, renderMethod(), 10);
 				}
+
+				$("#newsRegions").sortable();
+				$("#newsRegions").disableSelection();
+				
 			});
 </script>
 </head>
